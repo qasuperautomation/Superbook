@@ -1,14 +1,26 @@
 ---
-title: 'Configure your site' 
-date: Last Modified 
-permalink: /getting-started/configure/index.html
+title: Chapter 1
+date: Last Modified
+permalink: /qaguidance/chapter1/index.html
 toc: true
 eleventyNavigation:
-  order: 5 
-  parent: Getting started 
-  key: Configure your site 
-  title: 'Configure your site'
+  order: 5
+  parent: Chapter1
+  key: Chapter1
+  title: Chapter1
 ---
+**W﻿hat does a QA do?** 
+
+QA ensures that the final product meets the requirements set out by the client and reduces the number of errors both in Dashboard and Apps for Aplikasi Super. 
+
+- - -
+
+## Quick launch 👩🏽‍🚀
+
+![](/static/img/image8.png)
+
+\
+\
 Once you have your spacebook running, your first step is to do some basic configuration to make it your own. All site configuration is stored in a single file located at **_data/site.json**. 
 
 If you have a local copy of your site installed you can edit this file directly, or you can edit and commit the file using the Github UI. The default **site.json** file looks like so: 
@@ -51,7 +63,6 @@ When you make changes to this file and deploy them, your site will automically u
 * **emoji** *(optional)*  -- this is the emoji used for your favicon 
 * **url** -- this is the main URL to your site on Netlify (this is not currently used but seems wise to track in config)
 
-
 ## Enable or disable features
 
 * **enableSearch** -- this will enable or disable the Elasticlunr search engine
@@ -63,13 +74,14 @@ When you make changes to this file and deploy them, your site will automically u
 * **enableNetlifyCMS** -- enable or disable Netlify CMS (false by default)
 * **enableEncryption** -- enable the logout button if you are using encryption (false by default)
 * **enablePageNavigation** -- enable or disable the built-in navigation that appears on the bottom of each page
----
+
+- - -
 
 ::: callout
 **Did you know?** If you enable the optional [Netlify CMS integration](/advanced/netlifycms/), all of these settings can also be changed via the CMS.
 :::
 
----
+- - -
 
 ## Basic Netlify configuration
 
