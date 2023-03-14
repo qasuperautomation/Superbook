@@ -1,20 +1,14 @@
 ---
-title: Tips and tricks
+title: Test
 date: Last Modified
-permalink: /tips-and-tricks/index.html
+permalink: /test/index.html
 comments: 0
 eleventyNavigation:
-  key: Tips & Tricks
-  title: Tips & Tricks
-  order: 20 
+  key: Test
+  title: Test
+  order: 25
 ---
+T﻿he following sections outline some test along with best practices for testing Dashboard and Application within Aplikasi Super. 
 
-The following sections outline some basic tips and tricks along with best practices for doing various things within your spacebook.
-
-* [Editing content](/tips-and-tricks/editing/)
-* [Working with images](/tips-and-tricks/images/)
-* [Working with links](/tips-and-tricks/links/)
-* [Working with embeds](/tips-and-tricks/embeds/)
-* [Understanding ordering](/tips-and-tricks/ordering/)
-* [Learning markdown](/tips-and-tricks/markdown/)
-
+* [Functional Test](/test/functionaltest.index.html)
+* [Regression](/tips-and-tricks/links/)
