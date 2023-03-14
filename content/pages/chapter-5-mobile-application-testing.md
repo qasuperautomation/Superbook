@@ -3,7 +3,7 @@ title: Chapter 5 - Mobile Application Testing
 date: 2023-03-14T08:45:19.194Z
 permalink: /qaguidance/chapter5/index.html
 eleventyNavigation:
-  order: 15
+  order: 21
   parent: QA Guidance
   key: Chapter 5 - Mobile Application Testing
 ---
