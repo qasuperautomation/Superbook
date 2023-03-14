@@ -3,7 +3,7 @@ title: Chapter 7  - Mobile Application Testing
 date: 2023-03-14T09:50:57.878Z
 permalink: /qaguidance/chapter7/index.html
 eleventyNavigation:
-  order: 17
+  order: 23
   parent: QA Guidance
   key: Chapter 7 - Bugs
 ---
