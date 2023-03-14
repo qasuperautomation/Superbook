@@ -36,16 +36,13 @@ Test cases are a collection of steps that can be executed positively and negativ
 
 Typically, QA engineers use Excel sheets to manually write test cases. In addition, you can use test management tools, such as TestRail, xray, Test Link, Qtest to create and maintain test cases
 
-![Example of  a Test Case](/static/img/test_case_template_qa_guidance.png "Example of  a Test Case")
+![Example of a test case](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/test_case_template_qa_guidance.png?updatedAt=1678775819503 "Example of a test case")
 
 In making the test case at Aplikasi Super, the QA Analyst is required to fill in some data in the Header on the Excel Sheet::
 
 1. Project/Application Name
-
 2. Testing Date
-
 3. Tester Name / Designation
-
 4. Environment : Staging / Production
 
 Then the QA Analyst performs some data entry to create a test case, which consists of:
@@ -81,7 +78,7 @@ Then the QA Analyst performs some data entry to create a test case, which consis
 
 **FLOW PROCESS TESCASE**
 
-![Flow Test Case](/static/img/testcases_flow.png "Flow Test Case")
+![Flow Test Case](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/TESTCASES_FLOW.png?updatedAt=1678775818982 "Flow Test Case")
 
 Information :
 
