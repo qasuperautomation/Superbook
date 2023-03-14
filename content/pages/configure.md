@@ -1,5 +1,5 @@
 ---
-title: Chapter 1
+title: Chapter 1 - Getting Started
 date: Last Modified
 permalink: /qaguidance/chapter1/index.html
 toc: true
