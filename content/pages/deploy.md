@@ -7,8 +7,6 @@ eleventyNavigation:
   parent: QA Guidance
   key: Chapter 4 - Mobile Application Testing
 ---
-
-
 Many new modern web applications are built using web-services, micro-services, and APIs. As a Super QA, you must have knowledge and experience of testing APIs and Web Services.
 
 **WHAT IS API TESTING?**
@@ -21,30 +19,25 @@ This form of testing includes interactions between various or say multiple APIs 
 
 &#x20;       Beberapa Tools yang dapat digunakan untuk testing API secara manual terdiri dari :
 
-1. _Postman_
-2. _Swagger_
-3. _Imsomnia_
+1. *Postman*
+2. *Swagger*
+3. *Imsomnia*
 
 Here's How to Use Postman, to test several services in different environments:
 
-
-
 1. Open Postman and Login with a Gmail account.
 
-
-
-
-
+   ![](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/postman.png?updatedAt=1678782391711)
 2. Set the environment and collection&#x20;
 
-![](<../.gitbook/assets/image (6).png>)
+![](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/postman_2.png?updatedAt=1678782391623)
 
 **3. Check the folder where the API is to be tested:**
 
 Example of API Login&#x20;
 
 a. Method: POST \
-b. Input Environment Test, example: \{{DEV\}}\
+b. Input Environment Test, example: {{DEV}}\
 c. Verify or Input Endpoint Login : /api/v3/auth/login\
 d. Input a request body and select JSON
 
@@ -58,16 +51,14 @@ d. Input a request body and select JSON
  }    
 ```
 
-![Input a Request Body](<../.gitbook/assets/image (7).png>)
+![Input a Request Body](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/postman_3.png?updatedAt=1678782391427)
 
 e. Setting Authorization\
-****Select Type : Bearer Token
+\*\*\*\*Select Type : Bearer Token
 
-Input Token : \{{access\_token\}}
+Input Token : {{access_token}}
 
-![Setting Authorization](<../.gitbook/assets/image (9) (1).png>)
-
-
+![Setting Authorization](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/postman_4.png?updatedAt=1678782391343)
 
 f. Click “SEND” button
 
@@ -75,7 +66,7 @@ f. Click “SEND” button
 
 The response must be 200 OK. It means that the request has been processed successfully.
 
-![](<../.gitbook/assets/image (11) (1).png>)
+![](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/postman_5.png?updatedAt=1678782390061)
 
 Each test consists of a test action. These are individual actions that need to be tested per API test flow. For each API request, the test needs to perform the following actions:
 
@@ -109,15 +100,13 @@ Basic Positive Test:&#x20;
 | Validate Payload           | <p>1. Response is a well-formed JSON object</p><p>2. Response structure is according to data model (schema validation: field names and field types are as expected, including nested objects; field values are as expected; non-nullable fields are not null, etc.)</p>                                                                                                                       |                                                                                                                                                                                                                                                                      |
 | Validate State             | <p>1. For GET requests, verify there is NO STATE CHANGE in the system (idempotence)</p><p>2. For POST, DELETE, PATCH, PUT operations</p><p>– Ensure action has been performed correctly in the system by:</p><p>– Performing appropriate GET request and inspecting response</p><p>– Refreshing the UI in the web application and verifying new state (only applicable to manual testing)</p> |                                                                                                                                                                                                                                                                      |
 
-
-
 | Basic positive tests | Validate Header                                                                                          | <p>Verify that HTTP headers are as expected, including content-type, connection, cache-control, expires,</p><p>access-control-allow-origin, keep-alive, HSTS, and other standard header fields – according to spec.</p><p>Verify that information is NOT leaked via headers (e.g. X-Powered-By header is not sent to user).</p> |
 | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Performance Sanity   | Response is received in a timely manner (within reasonable expected time) — as defined in the test plan. |                                                                                                                                                                                                                                                                                                                                 |
 
 **2. Here's an example: Positive + Optional Parameter** Execute API call with valid required parameters and valid optional parameters
 
-Run the same test in #1, this time including the endpoint's optional parameters _(e.g., filter, sort, limit, skip, etc.)_
+Run the same test in #1, this time including the endpoint's optional parameters *(e.g., filter, sort, limit, skip, etc.)*
 
 __
 
@@ -128,9 +117,7 @@ __
 | Validate Header               | As in #1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                             |
 | Performance Sanity            | As in #1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                             |
 
-
-
-_**3.** _ **Here's an example: Negative testing – valid input** Execute API calls with valid input that attempts illegal operations. i.e.:
+***3.***  **Here's an example: Negative testing – valid input** Execute API calls with valid input that attempts illegal operations. i.e.:
 
 – Trying to create a resource with a name that already exists (ex : user configuration with the same name)
 
@@ -141,7 +128,6 @@ _**3.** _ **Here's an example: Negative testing – valid input** Execute API ca
 – Tried illegal operations (ex : delete a user configuration without permission.)\
 –  Etc
 
-\
 
 
 | **Test Scenario Category** | **Test Action Category** | **Test Action Description**                                                                                                                                                                                                                                                                                                                                        |
@@ -171,16 +157,12 @@ _**3.** _ **Here's an example: Negative testing – valid input** Execute API ca
 
 – Unsupported methods for endpoints
 
-
-
 | **Test Scenario Category**       | **Test Action Category** | **Test Action Description** |
 | -------------------------------- | ------------------------ | --------------------------- |
 | Negative testing – Invalid input | Validate Status Code     | As in #1                    |
 | Validate Payload                 | As in #1                 |                             |
 | Validate Header                  | As in #1                 |                             |
 | Performance Sanity               | As in #1                 |                             |
-
-
 
 1. Berikut Contoh : Destructive testing
 
@@ -204,8 +186,6 @@ Sengaja mencoba untuk menggagalkan API untuk memeriksa kekokohannya:
 5. Using incorrect HTTP headers (e.g. Content-Type)
 6. Small concurrency tests – concurrent API calls that write to the same resources (DELETE + PATCH, etc.)
 7. Other exploratory testing
-
-
 
 | **Test Scenario Category**       | **Test Action Category** | **Test Action Description** |
 | -------------------------------- | ------------------------ | --------------------------- |
