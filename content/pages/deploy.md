@@ -1,215 +1,51 @@
 ---
-title: Chapter 4 - API Testing
+title: Chapter 5 - Mobile Application Testing
 date: 2020-11-20
-permalink: /qaguidance/chapter4/index.html
+permalink: /qaguidance/chapter5/index.html
 eleventyNavigation:
   order: 20
   parent: QA Guidance
-  key: Chapter 4 - API Testing
+  key: Chapter 5 - Mobile Application Testing
 ---
+QA Super requires several stages that need to be tested when receiving the Mobile Application. And there are some key issues to be aware of:
 
+**A. Functional Testing**\
+\*\*\*\*Testing done by certification requirements. Like whether the application works according to requirements or not.
 
-Many new modern web applications are built using web-services, micro-services, and APIs. As a Super QA, you must have knowledge and experience of testing APIs and Web Services.
+**B. Android/IOS UI/Responsiveness Testing**\
+This is a user-centric application testing. In this test phase, items such as:
 
-**WHAT IS API TESTING?**
+visibility of text across different screens of the app, interactive messages, alignment of elements, look and feel of the app for different screens, field sizes, etc. tested below.
 
-An API is a collection of routines, tools, protocols that are together required to build a software application. Any system software or application software consisting of multiple APIs can perform Application Programming Interface (API) testing.&#x20;
-
-This form of testing includes interactions between various or say multiple APIs as well as interactions between APIs and application programs. This procedure mainly includes making API calls using the software and observing the system response after receiving the output.
-
-**HOW TO THE TESTING API ?**
-
-&#x20;       Beberapa Tools yang dapat digunakan untuk testing API secara manual terdiri dari :
-
-1. _Postman_
-2. _Swagger_
-3. _Imsomnia_
-
-Here's How to Use Postman, to test several services in different environments:
-
-
-
-1. Open Postman and Login with a Gmail account.&#x20;
-
-![](<../.gitbook/assets/image (1) (1) (1).png>)
-
-2\. Set the environment and collection&#x20;
-
-![](<../.gitbook/assets/image (6).png>)
-
-**3. Check the folder where the API is to be tested:**
-
-Example of API Login&#x20;
-
-a. Method: POST \
-b. Input Environment Test, example: \{{DEV\}}\
-c. Verify or Input Endpoint Login : /api/v3/auth/login\
-d. Input a request body and select JSON
-
-```
- {
-
-   "username": "masrul",
-
-   "password" : "123456"
-
- }    
-```
-
-![Input a Request Body](<../.gitbook/assets/image (7).png>)
-
-e. Setting Authorization\
-****Select Type : Bearer Token
-
-Input Token : \{{access\_token\}}
-
-![Setting Authorization](<../.gitbook/assets/image (9) (1).png>)
-
-
-
-f. Click “SEND” button
-
-**Result :**
-
-The response must be 200 OK. It means that the request has been processed successfully.
-
-![](<../.gitbook/assets/image (11) (1).png>)
-
-Each test consists of a test action. These are individual actions that need to be tested per API test flow. For each API request, the test needs to perform the following actions:
-
-**​​1. Verify correct HTTP status code** \
-Example : creating a resource should return 201 CREATED and unpermitted requests should return 403 FORBIDDEN, etc. \
-**2. Verify response payload** \
-Check valid JSON body and correct field names, types, and values — including in error responses. \
-**3. Verify response headers** \
-HTTP server headers have implications on both security and performance. \
-**4. Verify correct application state** \
-This is optional and applies mainly to manual testing, or when a UI or another interface can be easily inspected. \
-**5. Verify basic performance sanity** \
-If an operation was completed successfully but took an unreasonable amount of time, the test fails.
-
-Each test consists of a test action. These are individual actions that need to be tested per API test flow. For each API request, the test needs to perform the following actions:
-
-The following Super QA test cases are included in the following general test scenario groups:
-
-a. Basic Positive Test \
-b. Extended positive test with optional parameters\
-c. Negative test with valid input \
-d. Negative test with invalid input \
-e. Destructive testing \
-f. Security, authorization, and permission tests (which are out of the scope of this post)
-
-Basic Positive Test:&#x20;
-
-| **Test Scenario Category** | **Test Action Category**                                                                                                                                                                                                                                                                                                                                                                      | **Test Action Description**                                                                                                                                                                                                                                          |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Basic positive tests       | Validate Status Code                                                                                                                                                                                                                                                                                                                                                                          | <p>1. All requests should return 2XX HTTP status code</p><p>2. Returned status code is according to spec:</p><p>– 200 OK for GET requests</p><p>– 201 for POST or PUT requests creating a new resource</p><p>– 200, 202, or 204 for a DELETE operation and so on</p> |
-| Validate Payload           | <p>1. Response is a well-formed JSON object</p><p>2. Response structure is according to data model (schema validation: field names and field types are as expected, including nested objects; field values are as expected; non-nullable fields are not null, etc.)</p>                                                                                                                       |                                                                                                                                                                                                                                                                      |
-| Validate State             | <p>1. For GET requests, verify there is NO STATE CHANGE in the system (idempotence)</p><p>2. For POST, DELETE, PATCH, PUT operations</p><p>– Ensure action has been performed correctly in the system by:</p><p>– Performing appropriate GET request and inspecting response</p><p>– Refreshing the UI in the web application and verifying new state (only applicable to manual testing)</p> |                                                                                                                                                                                                                                                                      |
-
-
-
-| Basic positive tests | Validate Header                                                                                          | <p>Verify that HTTP headers are as expected, including content-type, connection, cache-control, expires,</p><p>access-control-allow-origin, keep-alive, HSTS, and other standard header fields – according to spec.</p><p>Verify that information is NOT leaked via headers (e.g. X-Powered-By header is not sent to user).</p> |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Performance Sanity   | Response is received in a timely manner (within reasonable expected time) — as defined in the test plan. |                                                                                                                                                                                                                                                                                                                                 |
-
-**2. Here's an example: Positive + Optional Parameter** Execute API call with valid required parameters and valid optional parameters
-
-Run the same test in #1, this time including the endpoint's optional parameters _(e.g., filter, sort, limit, skip, etc.)_
-
-__
-
-| **Test Scenario Category**    | **Test Action Category**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | **Test Action Description** |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| Positive + Opsional Parameter | Validate Status Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | As in #1                    |
-| Validate Payload              | <p>Verify response structure and content as in #1.  </p><p>In addition, check the following parameters:</p><p>– filter: ensure the response is filtered on the specified value.</p><p>– sort: specify field on which to sort, test ascending and descending options.</p><p>Ensure the response is sorted according to selected field and sort direction.</p><p>– skip: ensure the specified number of results from the start of the dataset is skipped</p><p>– limit: ensure dataset size is bounded by specified limit.</p><p>– limit + skip: Test pagination</p><p>Check combinations of all optional fields (fields + sort + limit + skip) and verify expected response.  </p> |                             |
-| Validate Header               | As in #1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                             |
-| Performance Sanity            | As in #1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                             |
-
-
-
-_**3.** _ **Here's an example: Negative testing – valid input** Execute API calls with valid input that attempts illegal operations. i.e.:
-
-– Trying to create a resource with a name that already exists (ex : user configuration with the same name)
-
-– Trying to delete a resource that doesn't exist (ex: user configuration with no such ID)
-
-– Trying to update a resource with illegal valid data (ex: rename a configuration to an existing name)
-
-– Tried illegal operations (ex : delete a user configuration without permission.)\
-–  Etc
-
+The most important points of this test:\
 \
+a. Device Selection (must always select original device)\
+b. Device Emulators are cost effective and useful during the early development phase\
+c. In real-life scenarios, physical devices are a must. Emulators and physical devices must be used in balance to produce optimal results.\
+**C. Compatibility testing**\
+The extension for Android apps is .APK. and for iOS app is .ipa must be confirmed. This test is mostly carried out in the form of two OS Vs application matrices and Device Model Applications Vs. Usually, the list of supported OS (and sometimes devices) are provided by the product owner or customer.\
+**D. Interface Testing**\
+\*\*\*\*This test is carried out after all application modules are fully developed, tested individually and all bugs fixed\
+**E. Network Testing**\
+\*\*\*\*During this test, requests/responses to/from the service are tested for various Condition. This test is mainly done to verify the response time where activities are carried out such as refreshing data after synchronization or loading data after login etc.\
+**F. Performance Test**\
+The performance of the application under some special conditions is checked.
 
+a. Low memory in device.
 
-| **Test Scenario Category** | **Test Action Category** | **Test Action Description**                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|                            | Validate Status Code     | <p>1. Verify that an erroneous HTTP status code is sent (NOT 2XX)</p><p>2. Verify that the HTTP status code is in accordance with error case as defined in spec</p>                                                                                                                                                                                                |
-|                            | Validate Payload         | <p>1. Verify that error response is received</p><p>2. Verify that error format is according to spec. e.g., error is a valid JSON object or a plain string (as defined in spec)</p><p>3. Verify that there is a clear, descriptive error message/description field</p><p>4. Verify error description is correct for this error case and in accordance with spec</p> |
-|                            | Validate Header          | As in #1                                                                                                                                                                                                                                                                                                                                                           |
-|                            | Performance Sanity       | Ensure error is received in a timely manner (within reasonable expected time)                                                                                                                                                                                                                                                                                      |
+b. Battery is in very low level.
 
-**4. Here's an example: Negative testing – Invalid input** Execute API calls with Invalid input :
+c. Poor/poor network reception.\
+**G. Installation/Uninstallation testing**\
+This is to ensure smooth app installation and removal without any ended up with errors, partial installations etc.\
+**H. Security Testing**\
+Data flow testing for encryption and decryption mechanisms will be tested in this phase. Access to stored data is also tested in this phase.\
+**I. Field testing**\
+\*\*\*\*Field testing is done specifically for mobile data networks and not in-house but by going out and using the app as a normal user.
 
-– Missing or invalid authorization token
+This is basically done to verify the behavior of the app when the phone has a 2G or 3G network connection. Field testing verifies if the app crashes under slow network connections or if it takes too long to load information.\
+**J. Interrupt Testing**\
+This is Offline Scenario Verification. Conditions where communication is cut off in the middle is referred to as the offline state. Some of the conditions under which network interrupts can be tested are as follows:
 
-– Missing required parameters
-
-– Invalid value for endpoint parameters, e.g.:
-
-– Invalid UUID in path or query parameters
-
-– Payload with invalid model (violates schema)
-
-– Payload with incomplete models (missing fields or required nested entities)
-
-– Invalid values ​​in nested entity fields
-
-– Invalid values ​​in HTTP headers
-
-– Unsupported methods for endpoints
-
-
-
-| **Test Scenario Category**       | **Test Action Category** | **Test Action Description** |
-| -------------------------------- | ------------------------ | --------------------------- |
-| Negative testing – Invalid input | Validate Status Code     | As in #1                    |
-| Validate Payload                 | As in #1                 |                             |
-| Validate Header                  | As in #1                 |                             |
-| Performance Sanity               | As in #1                 |                             |
-
-
-
-1. Berikut Contoh : Destructive testing
-
-Sengaja mencoba untuk menggagalkan API untuk memeriksa kekokohannya:
-
-1. Wrong content-type in payload
-2. Content with wrong structure
-3. Overflow parameter values. ex:
-
-* Mencoba untuk create a user configuration with a title longer than 200 characters
-* Mencoba untuk  GET a user with invalid UUID
-
-&#x20;            which is 1000 characters long
-
-* Overflow payload – huge JSON in request body
-
-1. Boundary value testing
-2. Empty payloads
-3. Empty sub-objects in payload
-4. Illegal characters in parameters or payload
-5. Using incorrect HTTP headers (e.g. Content-Type)
-6. Small concurrency tests – concurrent API calls that write to the same resources (DELETE + PATCH, etc.)
-7. Other exploratory testing
-
-
-
-| **Test Scenario Category**       | **Test Action Category** | **Test Action Description** |
-| -------------------------------- | ------------------------ | --------------------------- |
-| Negative testing – Invalid input | Validate Status Code     | As in #1                    |
-| Validate Payload                 | As in #1                 |                             |
-| Validate Header                  | As in #1                 |                             |
-| Performance Sanity               | As in #1                 |                             |
-
-**Test case** derived from the table above should cover different test streams according to their needs, resources, and priorities.\
+Following:\
+Data cable disconnection during the data transfer process. Network outage during transaction posting phase. Network recovery after outage. Battery discharge or Power On/Off when in transaction phase
