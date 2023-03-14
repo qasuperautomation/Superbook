@@ -1,11 +1,11 @@
 ---
 title: Chapter 6  - Mobile Application Testing
 date: 2023-03-14T08:57:35.220Z
-permalink: /qaguidance/chapter5/index.html
+permalink: /qaguidance/chapter6/index.html
 eleventyNavigation:
-  order: 21
+  order: 22
   parent: QA Guidance
-  key: Chapter 5 - Mobile Application Testing
+  key: Chapter 6 - Mobile Application Testing
 ---
 # Chapter 6 - Flow QA Testing
 
