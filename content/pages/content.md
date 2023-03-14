@@ -1,7 +1,7 @@
 ---
 title: Chapter 2 - Testing Documents
 date: Last Modified
-permalink: /qaguidance/content/index.htm
+permalink: /qaguidance/chapter2/index.htm
 toc: true
 eleventyNavigation:
   order: 10
