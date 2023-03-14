@@ -8,9 +8,13 @@ eleventyNavigation:
   parent: QA Guidance
   key: Chapter 2 - Testing Documents
 ---
-### **BACKGROUND**
-
+### **BACKGROUND**\
+\
+::: callout
 The basic idea is to include regression testing (partially) during the feature testing period, this is the tactical preparation that is relevant to the faster release cycle when the regression period is being shortened. To start we can use the rule of thumb: “Check the blast radius of the changes”.
+:::
+
+
 
 **WHAT IS TEST PLAN DOCUMENT ?**
 
