@@ -6,7 +6,7 @@ toc: true
 eleventyNavigation:
   order: 10
   parent: QA Guidance
-  key: Set up your content
+  key: Chapter 2 - Testing Documents
 ---
 ### **BACKGROUND**
 
