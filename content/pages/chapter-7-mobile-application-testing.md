@@ -78,8 +78,6 @@ Below are Gitlab/Jira vs Quality Team vs Product Team Priority
 | Lowest   | Trivial problem with little or no impact on progress | Trivial               |
 |          |                                                      | Improvement           |
 
-
-
 ![Bugs Severity And Priority](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/chapter_7_2.jpg?updatedAt=1678794781016 "Bugs Severity And Priority")
 
 **SEVERITY:**- Severity is effect of bug effect means- Critical, Major, Moderate , Minor and Cosmetic. Bug/Defect severity can be defined as the impact of the bug on the application.
@@ -116,6 +114,4 @@ Below are Gitlab/Jira vs Quality Team vs Product Team Priority
 9. **Developer:** If the bug has been fixed by the developer, the assigned developer will shift the ticket in Jira to ready QA test
 10. **Ready QA Test:** QA will work on the ticket which has been fixed by the developer concerned. when the bugs still occur then QA will shift the ticket to Todo (Reassign again to developer)
 11. **DONE:** If the bugs have been solved then QA will move the ticket in Jira to ready to deploy and will inform to engineering squad lead so that it can be up to production
-12. **Ready Deploy to Production:** Engineering squad lead inform to tech lead for Ready to Prod
-
-\
+12. **Ready Deploy to Production:** Engineering squad lead inform to tech lead for Ready to Prod.
