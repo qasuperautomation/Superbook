@@ -152,10 +152,7 @@ To do this, the tester prepares test data (test data). And can be prepared manua
 
 Test Closure is a record that is prepared before the test team officially completes the testing process.
 
-This record contains the total number of test cases, the total number of testcases executed, the total number of defects found, the total number of defects fixed, the total number of unfixed bugs, the total number of no rejected bugs, etc.
-
-<!--EndFragment-->\
-\
+This record contains the total number of test cases, the total number of testcases executed, the total number of defects found, the total number of defects fixed, the total number of unfixed bugs, the total number of no rejected bugs, etc.\
 \
 \
 \
