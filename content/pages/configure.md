@@ -6,8 +6,8 @@ toc: true
 eleventyNavigation:
   order: 5
   parent: QA Guidance
-  key: Chapter1
-  title: Chapter1
+  key: Chapter 1 - Getting Started
+  title: Chapter 1 - Getting Started
 ---
 **W﻿hat does a QA do?** 
 
