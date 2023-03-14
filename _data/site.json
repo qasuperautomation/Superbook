@@ -16,6 +16,6 @@
   "enableContact": false,
   "enableNetlifyCMS": true,
   "enableComments": true,
-  "enableEncryption": true,
+  "enableEncryption": false,
   "enablePageNavigation": true
 }
