@@ -5,7 +5,7 @@ permalink: /qaguidance/chapter1/index.html
 toc: true
 eleventyNavigation:
   order: 5
-  parent: Getting started
+  parent: qa guidance
   key: Chapter1
   title: Chapter1
 ---
