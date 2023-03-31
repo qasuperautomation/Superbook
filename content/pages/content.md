@@ -233,11 +233,9 @@ Your content can include all sorts of [markdown tags](/tips-and-tricks/markdown)
 
 If you are working locally, you should be seeing all of your changes as you work and if you are editing your Github files directly or using Netlify CMS your changes will appear as soon as the site builds and finishes its deploy. 👍
 
+<video>https://www.youtube.com/watch?v=bmtJFgTu3mg</video>
+
 ## Mind your spaces and indents
 
 ::: callout
 **Mind your spaces!** Be sure to add one space after each entry in your frontmatter and to indent properly, or it will cause an error in your build. The nested options under **eleventyNavigation** are indented with exactly two spaces.
-
-
-
-https://www.youtube.com/watch?v=bmtJFgTu3mg
