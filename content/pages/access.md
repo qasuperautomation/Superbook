@@ -1,6 +1,6 @@
 ---
 title: Chapter 3 - Method and Types of Software Testing
-date: Last Modified
+date: 2023-03-31T14:06:25.735Z
 permalink: /qaguidance/chapter3/index.html
 toc: true
 eleventyNavigation:
@@ -44,7 +44,13 @@ a. consists of **Branch, Condition, Statement, and Decision**
 
 ![Timeline](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/timeline.png?updatedAt=1678778260608 "Timeline")
 
+
+
+```
 https://youtu.be/21X5lGlDOfg
+```
+
+[](https://youtu.be/21X5lGlDOfg)
 
 \
 \
