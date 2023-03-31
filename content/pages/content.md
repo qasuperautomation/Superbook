@@ -10,13 +10,11 @@ eleventyNavigation:
 ---
 ### **BACKGROUND**
 
-
-
 ::: callout
 **The basic idea** is to include regression testing (partially) during the feature testing period, this is the tactical preparation that is relevant to the faster release cycle when the regression period is being shortened. To start we can use the rule of thumb: “Check the blast radius of the changes.
 :::
 
-###  **TEST PLAN DOCUMENT ?**
+### **TEST PLAN DOCUMENT ?**
 
 **Test plan document** is a document which contains the plan for all the testing activities to be done to deliver a quality product. Test Plan document is derived from the Product Description, SRS, or Use case document for all future activities of the project, it’s usually prepared by Test Lead or Test Manager.
 
@@ -239,3 +237,7 @@ If you are working locally, you should be seeing all of your changes as you work
 
 ::: callout
 **Mind your spaces!** Be sure to add one space after each entry in your frontmatter and to indent properly, or it will cause an error in your build. The nested options under **eleventyNavigation** are indented with exactly two spaces.
+
+
+
+https://www.youtube.com/watch?v=bmtJFgTu3mg
