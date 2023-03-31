@@ -44,14 +44,9 @@ a. consists of **Branch, Condition, Statement, and Decision**
 
 ![Timeline](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/timeline.png?updatedAt=1678778260608 "Timeline")
 
-```
+https://youtu.be/21X5lGlDOfg
 
-```
-
-
-
-
-
+\
 \
 How to measure the timeline ?
 
