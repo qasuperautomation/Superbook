@@ -42,9 +42,15 @@ a. consists of **Branch, Condition, Statement, and Decision**
 
 **2. How to execute the test and define the timeline**
 
-
-
 ![Timeline](https://ik.imagekit.io/kmv5uxk0b/qa_guidance/timeline.png?updatedAt=1678778260608 "Timeline")
+
+```
+
+```
+
+
+
+
 
 \
 How to measure the timeline ?
