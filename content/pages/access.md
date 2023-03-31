@@ -46,14 +46,7 @@ a. consists of **Branch, Condition, Statement, and Decision**
 
 
 
-```
-https://youtu.be/21X5lGlDOfg
-```
 
-[](https://youtu.be/21X5lGlDOfg)
-
-\
-\
 How to measure the timeline ?
 
 2 weeks of development : 1 weeks of testing
